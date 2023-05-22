@@ -1,0 +1,541 @@
+
+/*  🟥🟥🟥🟥🟥 pour MOBILE 🟥🟥🟥🟥🟥 (par défaut) */
+/*- - - 기본 CSS - - - */
+
+.container{
+  width:90%;
+  max-width:1132px;
+  margin:0 auto;
+}
+.cfixed:after, .container:after{
+  display:block;
+  content:"";
+  clear:both;
+}
+.blind{
+  position:absolute;
+  width:0;
+  height:0;
+  line-height:0;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+.sec-tit{
+  font-size:42px;
+  color:#079992;
+  font-weight:normal;
+}
+.divider{
+  width:90%;
+  max-width:1132px;
+  margin:0 auto;
+  margin-top:77px;
+  background:#eee;
+}
+.m-divider{
+  width:20px;
+  margin:0 auto;
+  margin-top:77px;
+  background:#079992;
+}
+
+/* - - - 헤더 - - - */
+.header{
+  position:relative; /*메뉴 목록(자식요소들)이 놓일 기준 설정을 위해 상대적위치로.*/
+  padding:18px 5%;
+}
+.header .logo{
+  float:left; /*로고 영역을 왼쪽으로 배치하기 위해.*/
+}
+.header .logo a{
+  font-size:30px;
+  font-size:1.875rem;
+  color:#f572d0;
+  font-weight:normal;
+  font-family: 'Cabin Sketch', cursive;
+}
+.header .gnb{
+  position:absolute; /*메뉴목록 영역을 헤더영역 밑으로 배치하기 위해 이렇게.*/
+  top:100%;
+  left:0;
+  width:100%;
+  background:#079992;
+  display:none;/* 숨겼다가 나중에 jquery로 보이게 할거니까. */
+}
+.header .gnb li{
+  border-bottom:1px solid #079992;
+}
+.header .gnb li a{
+  display:block;
+  padding:14px 0 14px 5%;
+  padding:0.875rem 0 0.875rem 5%;
+  font-size:14px;
+  font-size:0.875rem;
+  color:#fff;
+}
+.header .menu-toggle-btn{
+  float:right;
+  width:20px;
+  width:1.25rem;
+  margin-top:4px;
+  margin-top:0.25rem;
+  cursor:pointer;
+}
+.header .menu-toggle-btn span{
+  display:block;
+  width:100%;
+  height:2px;
+  background:#079992;
+}
+.header .menu-toggle-btn span:nth-child(2){
+  margin:5px 0 5px 0;
+  margin:0.3125rem 0 0.3125rem 0;
+}
+
+/* - - - 슬라이더 - - - */
+.slider img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+}
+
+/* - - - 디스플레이 - - - */
+.display-section{
+  margin-top:59px;
+  margin-top:3.6875rem;
+  text-align:center;
+}
+.display-section .sec-tit{
+  margin-bottom:30px;
+  margin-bottom:1.875rem;
+}
+.display-section .desc{
+  font-family:'PT Serif';
+  color:#616161;
+  line-height:1.9;
+}
+
+/* - - - 프로모션 PROMITION - - - */ 
+.promotion-section{
+  margin-top:68px;
+  }
+      
+  .promotion-section .promo-list li{
+  margin-top:52px;
+  text-align:center;
+  }
+      
+  .promotion-section .promo-list li:first-child{
+  margin-top:0;
+  }
+      
+  .promotion-section .promo-list li img{
+  height:52px;
+  }
+      
+  .promotion-section .promo-list li h3{
+  margin:29px 0 20px 0;
+  color:#079992;
+  font-weight:normal;
+  }
+      
+  .promotion-section .promo-list li p{
+  font-size:14px;
+  font-family:'PT Serif';
+  color:#616161;
+  line-height:1.5;
+  }  
+
+
+/* - - - 최근 작업 영역 - - - */ 
+.work-section{
+  margin-top:73px;
+  margin-top:4.5625rem;
+}
+.work-section .sec-tit{
+  width:90%;
+  max-width:1132px;
+  margin:0 auto;
+  margin-bottom:47px;
+  margin-bottom:2.9375rem;
+  text-align:center;
+}
+.work-section .work-list li{
+  width:100%;
+}
+.work-section .work-list li a{
+  display:block;
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.work-section .work-list li a:before{
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:10;
+  width:100%;
+  height:100%;
+  content:"";
+  opacity:0;
+  transition:all 0.2;
+  background:#079992;
+}
+.work-section .work-list li a:hover:before{
+  opacity:0.86;
+}
+.work-section .work-list li .info{
+  position:absolute;
+  top:0;
+  left:23px;
+  left:1.4375rem;
+  z-index:20;
+  transition:all 0.3s;
+}
+.work-section .work-list li a:hover .info{/*a요소에 마우스를 댈 경우 .info에 변화*/
+  transform:translateY(23px) scale(1.1);
+  opacity:1;
+}
+.work-section .work-list li .info h3{
+  margin-bottom:8px;
+  margin-bottom:0.5rem;
+  font-size:23px;
+  font-size:1.4375rem;
+  color:#FFF;
+  font-weight:normal;
+}
+.work-section .work-list li .info span{
+  font-size:11px;
+  font-size:0.6875rem;
+  color:#fff;
+}
+.work-section .work-list li img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  max-width:auto;
+}
+
+/* - - - 최근 글 recent posts - - - */ 
+.blog-section{
+  margin-top:77px;
+  margin-top:4.8125rem;
+}
+.blog-section .sec-tit{
+  margin-bottom:47px;
+  margin-bottom:2.9375rem;
+  text-align:center;
+}
+.blog-section .blog-list li{
+  width:100%;
+  margin-top:45px;
+  margin-top:2.8125rem;
+}
+.blog-section .blog-list li:nth-child(1){
+  margin-top:0;
+}
+.blog-section .blog-list li img{
+  width:100%;
+  max-width:100%;
+  height:auto; /*height의 길이제한을 줄 수 있을까? 만약 세로가 긴 이미지를 첨부하면?*/
+  display:block;
+}
+.blog-section .blog-list li time{
+  display:block;
+  margin:11px 0 10px 0;
+  margin:0.6875rem 0 0.625rem 0;
+  color:#9e9e9e;
+}
+.blog-section .blog-list li h3{
+  color:#424242;
+  font-weight:normal;
+  line-height: 1.6;
+}
+
+/* - - - contact - - - */
+.contact-section{
+  margin-top:109px;
+  margin-top:6.8125rem;
+}
+.contact-section .sec-tit{
+  margin-bottom:47px;
+  margin-bottom:2.9375rem;
+  text-align:center;
+}
+.contact-section .form-box .form input{
+  padding-bottom:13px;
+  padding-bottom:0.8125rem;
+  margin-bottom:38px;
+  margin-bottom:2.375rem;
+}
+.contact-section .form-box .textarea textarea{
+  height:165px;
+  height:10.3125rem;
+}
+.contact-section .form-box .send-btn{
+  margin-top:36px;
+  margin-top:2.25rem;
+  text-align:right;
+}
+.contact-section .form-box .send-btn button{
+  padding:15px;
+  margin:0;
+  border:0;
+  font-size: 12px;
+  color:#fff;
+  background:#f572d0;
+  font-family:'Montserrat';
+  cursor:pointer;
+  border-radius:3px;
+}
+
+/* - - - footer - - - */
+.footer{
+  margin-top:104px;
+  margin-top:6.5rem;
+}
+.footer iframe{
+  width:100%;
+  height:320px;
+  height:20rem;
+}
+.footer p{
+  margin:21px 0;
+  margin:1.3125rem 0;
+  font-size:20px;
+  font-size:1.25rem;
+  color:#f572d0;
+  text-align:center;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+
+
+
+
+
+/* 🟩🟩🟩🟩🟩  media queries pour TABLETTE 🟩🟩🟩🟩🟩 */ 
+@media all and (min-width:768px){
+/* - - - 기본 CSS - - - */
+.divider{
+  margin-top:124px;
+}
+.m-divider{
+  margin-top:124px;
+}
+
+/* - - - 헤더 - - - */
+.header{
+  position:static;/*header영역은 더 이상 상대적 위치로 작동할 필요가 없으므로.*/
+  padding:28px 52px;
+  padding:1.75rem 3.25rem;
+}
+.header .gnb{
+  display:block !important;
+  position:static; /*메뉴영역은 더 이상 절대적인 위치로 작동할 필요가 없으므로*/
+  float:right;
+  width:auto;
+  margin-top:6px;
+  margin-top:0.375rem;
+  background:none;
+}
+.header .gnb li{
+  float:left;
+  margin-left:21px;
+  border-bottom:0;
+}
+.header .gnb li a{
+  color:#079992;
+  padding:0;
+  font-size:16px;
+  font-size:1rem;
+}
+.header .menu-toggle-btn{
+  display:none !important;
+}
+
+/* - - - 디스플레이 - - - */
+.display-section{
+  margin-top:95px;
+}
+
+/* - - - 프로모션 - - - */ 
+.promotion-section{
+  margin-top:110px;
+  }
+      
+.promotion-section .promo-list li{
+  float:left;
+  width:23.046875%;
+  /* 177px ÷ 768px*/
+  margin-left:2.604166666666667%;
+  /* 20px ÷ 768px*/
+  margin-top:0;
+}
+  
+  .promotion-section .promo-list li:first-child{
+  margin-left:0;
+  }
+
+
+/* - - - 최근 작업 영역 - - - */ 
+.work-section{
+  margin-top:118px;
+  margin-top:7.375rem;
+}
+.work-section .sec-tit{
+  margin-bottom:76px;
+  margin-bottom:4.75;
+}
+.work-section .work-list li{
+  float:left;
+  width:50%;
+}
+.work-section .work-list li .info{
+  left:37px;
+  left:2.3125;
+}
+.work-section .work-list li a:hover .info{
+  transform:translateY(37px) scale(1.1);
+}
+
+/* - - - 최근 글 영역 - - - */
+.blog-section{
+  margin-top:124px;
+  margin-top:7.75rem;
+}
+.blog-section .sec-tit{
+  margin-bottom:76px;
+  margin-bottom:4.75rem;
+}
+.blog-section .blog-list li{
+  float:left;
+  width:31.297222222222%; /** 242.666666666 ÷ 768 px */
+  margin-top:0;
+}
+.blog-section .blog-list li:nth-child(1){
+  margin-left:0;
+}
+
+/* - - - contact - - - -*/ 
+.contact-section{
+  margin-top:176px;
+  margin-top:11rem;
+}
+.contact-section .sec-tit{
+  margin-bottom:76px;
+  margin-bottom:4.75rem;
+}
+.contact-section .form-box .form, .contact-section .form-box .textarea{
+  float:left;
+  width:48.6979166666666%;/* 374px ÷ 768px */
+}
+.contact-section .form-box .form{
+  margin-right:2.369668246445%; /* 20px ÷ 768px */
+}
+.contact-section .form-box .form input:last-child{
+  margin-bottom:0;
+}
+
+/* - - - footer - - - -*/
+.footer iframe{
+  height:432px;
+  height:27rem;
+}
+.footer p{
+  margin:34px 0;
+  margin:2.125rem 0;
+}
+
+
+}/* 🟩 fin de media queries pour TABLETTE 🟩*/
+
+
+
+/* 🟦🟦🟦🟦🟦 media queries pour PC 🟦🟦🟦🟦🟦 */
+@media all and (min-width:1024px){
+
+.display-section .sec-tit{
+  text-align:left;
+}
+.display-section .sec-tit{
+  float:left;
+  margin-bottom:0;
+}
+.display-section .desc{
+  position:relative; /*선이 위치할 기준을 정하기 위해. 여기서 선이란? */
+  float:right;
+  padding-left:20px;
+  padding-left:1.25;
+  font-family:'PT Serif';
+  color:#616161;
+  line-height:1.9;
+}
+.display-section .desc:before{ /*before나 after는 가상요소 추가기능.*/
+  position:absolute;
+  display:block;
+  top:9px;
+  left:0;
+  width:2px;
+  width:0.125rem;
+  height:44px;
+  height:2.75rem;
+  background:#e0e0e0;
+  content:"";
+}
+
+/* - - - 프로모션 - - - */ 
+.promotion-section .promo-list li{
+  width:23.67491166077739%;/*268px ÷ 1132px*/
+  margin-left:1.76678445229682%; /* 20px ÷ 1132px */
+}
+
+/* - - - 최근 작업 영역  - - - */ 
+.work-section .sec-tit{
+  text-align:left;
+}
+.work-section .work-list li{
+  width:25%;
+}
+
+/* - - - 최근 글 recent post - - - */ 
+.blog-section .sec-tit{
+  float:left;
+  margin-bottom:0;
+}
+.blog-section .blog-list{
+  float:right;
+  width:76.5583038869258%; /* 844px ÷ 1132px 
+  844는 어딘가에서 좌우margin을 줘서 이렇게 된걸텐데 어디서 한건지? 
+  내가 예상할 수 있는 부분은 "BLOG"라는 큰 글씨부분을 제외해서 인 듯 한데. */
+}
+.blog-section .blog-list li{
+  width:31.75355450236967%; /* 268px ÷ 844px*/
+  margin-left:2.369668246445498%; /* 20px ÷ 844px*/
+}
+
+/* contact */
+.contact-section .sec-tit{
+  float:left;
+  margin-bottom:0;
+}
+.contact-section .form-box{
+  float:right;
+  width:74.5583038869258%; /* 844px ÷ 1132px */
+}
+.contact-section .form-box .form, .contact-section .form-box .textarea{
+  width:48.8151658%; /* 412px ÷ 844 px*/
+}
+
+
+
+.contact-section .form-box .form{
+  margin-right:2.3696682464454976303317535545024%;/* 20px ÷ 844px*/
+}
+
+
+}/* 🟦 fin de media queris pour PC 🟦*/
+
+
